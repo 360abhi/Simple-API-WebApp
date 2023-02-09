@@ -12,5 +12,5 @@ export class ViewComponent {
   constructor(public _apiservice: ApiService){
     this._apiservice.value.subscribe(data => this.value = data) ;
   }
-  value: string ="";
+  value:any;
 }

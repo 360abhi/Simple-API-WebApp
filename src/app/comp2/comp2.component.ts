@@ -12,7 +12,7 @@ export class Comp2Component {
     this._apiservice.value.subscribe(data => this.value = data) ;
   }
 
-  value: string = "abhishek"
+  value:any;
 
   update(target:any) : void {
     this._apiservice.value.next(target.value)
