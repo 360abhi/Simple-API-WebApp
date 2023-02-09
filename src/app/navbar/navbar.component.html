@@ -1,0 +1,12 @@
+<div class="py-2 px-5 shadow-xl mb-5 sticky top-0 bg-pink-100">
+    <nav class="flex items-center justify-between">
+        <h3 class="font-semibold hover:text-pink-800 text-2xl hover:cursor-pointer">API Fetcher</h3>
+        <ul class="flex gap-6">
+            <a class="hover:underline hover:text-pink-800" routerLink="home" routerLinkActive="myactive" ><li>Home</li></a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive"  routerLink="das"><li>Login</li></a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive"  routerLink="ae"><li>Contact</li></a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive"  routerLink="about"><li>About</li></a>
+        </ul>
+        <button class="btn btn-secondary" (click)="showData()">Get Data</button>
+    </nav>
+</div>
