@@ -1,4 +1,4 @@
-<div class="p-4 mx-auto w-[90vw]" *ngIf="_apiservice.toshow">
+<div class="p-4 mx-auto w-[98vw]" *ngIf="!_apiservice.toshow">
     <div class="">
         <table class=" table-fixed font-mono">
           <!-- head -->
@@ -27,6 +27,6 @@
 </div>
 
 
-<div class="p-4" *ngIf="!_apiservice.toshow">
+<div class="p-4" *ngIf="_apiservice.toshow">
     <h2 class="text-3xl font-mono text-blue-800">Click the Get Data Button to see the info</h2>
 </div>
