@@ -12,12 +12,15 @@ import { ErrorpageComponent } from './errorpage/errorpage.component';
 import { ViewComponent } from './view/view.component';
 import { Comp1Component } from './comp1/comp1.component';
 import { Comp2Component } from './comp2/comp2.component';
+import { ContactComponent } from './contact/contact.component';
+import { ChildComponent } from './child/child.component';
 
 const appRoutes : Routes =[
   { path : '', component:HomeComponent },
   { path : 'about', component: AboutComponent},
   { path : 'home', component: HomeComponent},
   {path:'view', component:ViewComponent},
+  { path:'contact', component:ContactComponent},
   {path : "**", component : ErrorpageComponent}
 ]
 
@@ -30,7 +33,9 @@ const appRoutes : Routes =[
     ErrorpageComponent,
     ViewComponent,
     Comp1Component,
-    Comp2Component
+    Comp2Component,
+    ContactComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
