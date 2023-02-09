@@ -22,7 +22,7 @@ export class ContactComponent implements AfterViewInit {
   }
 
   change() : void {
-    this.child.value = "Its changed";
+    this.child.value = "The value is  changed";
   }
   
 }
