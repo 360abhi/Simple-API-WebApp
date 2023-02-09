@@ -7,13 +7,18 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
-  url : string = 'https://jsonplaceholder.typicode.com/users';
+  urlUsers : string = 'https://jsonplaceholder.typicode.com/users';
   toshow : boolean = false;
+  urlPosts : string = 'https://jsonplaceholder.typicode.com/posts';
 
   constructor(private http: HttpClient) { }
 
   getDetails() : Observable<any> {
-    return this.http.get(this.url);
+    return this.http.get(this.urlUsers);
+  }
+  
+  getPosts() : Observable<any> {
+    return this.http.get(this.urlPosts);
   }
 
   show() : void {
