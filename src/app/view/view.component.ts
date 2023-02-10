@@ -11,6 +11,7 @@ export class ViewComponent {
   
   constructor(public _apiservice: ApiService){
     this._apiservice.value.subscribe(data => this.value = data) ;
+    this._apiservice.navbar = false;
   }
   value:any;
 }

@@ -9,7 +9,9 @@ import { ApiService } from '../Services/api.service';
 export class AboutComponent implements OnInit{
 
   posts: any;
-  constructor(public _apiservice: ApiService){}
+  constructor(public _apiservice: ApiService){
+    this._apiservice.navbar = true;
+  }
 
   ngOnInit(): void {
       this._apiservice.getPosts()

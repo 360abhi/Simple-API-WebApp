@@ -12,6 +12,7 @@ export class ApiService {
   urlPosts : string = 'https://jsonplaceholder.typicode.com/posts';
 
   value = new BehaviorSubject('Abhishek');
+  navbar: boolean = false;
 
   constructor(private http: HttpClient) {}
 

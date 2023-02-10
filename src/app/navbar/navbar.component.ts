@@ -8,7 +8,9 @@ import { ApiService } from '../Services/api.service';
 })
 export class NavbarComponent {
 
-  constructor(private _apiservice: ApiService){}
+  constructor(public _apiservice: ApiService){
+    this._apiservice.navbar = true;
+  }
 
   showData() : void {
     this._apiservice.show()

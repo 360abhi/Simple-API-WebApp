@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
+import { ApiService } from '../Services/api.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,6 +9,10 @@ import { ChildComponent } from '../child/child.component';
 })
 export class ContactComponent implements AfterViewInit {
   
+
+  constructor(public _apiservice: ApiService){
+    this._apiservice.navbar = false;
+  }
 
   value: string = 'abhishek';
   @ViewChild('box') box : ElementRef ;
@@ -18,11 +23,10 @@ export class ContactComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     // this.box.nativeElement.style.backgroundColor = "blue"
     // this.text.nativeElement.innerHTML = "this is the changed text"
-  
   }
 
   change() : void {
-    this.child.value = "The value is  changed";
+    this.child.value = "The value is changed";
   }
   
 }

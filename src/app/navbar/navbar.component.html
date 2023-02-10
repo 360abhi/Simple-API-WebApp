@@ -1,12 +1,25 @@
 <div class="py-2 px-5 shadow-xl mb-5 sticky top-0 bg-pink-100">
     <nav class="flex items-center justify-between">
         <h3 class="font-semibold hover:text-pink-800 text-2xl hover:cursor-pointer">API Fetcher</h3>
+        <ng-container *ngIf="_apiservice.navbar">
+            <button class="py-1 btn btn-outline" (click)="showData()">Get Data</button>
+        </ng-container>
         <ul class="flex gap-6">
-            <a class="hover:underline hover:text-pink-800" routerLink="home" routerLinkActive="myactive" ><li>Home</li></a>
-            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive"  routerLink="view"><li>View</li></a>
-            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive"  routerLink="contact"><li>Contact</li></a>
-            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive"  routerLink="about"><li>About</li></a>
+            <a class="hover:underline hover:text-pink-800" routerLink="home" routerLinkActive="myactive">
+                <li>Home</li>
+            </a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive" routerLink="view">
+                <li>View</li>
+            </a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive" routerLink="contact">
+                <li>Contact</li>
+            </a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive" routerLink="about">
+                <li>About</li>
+            </a>
+            <a class="hover:underline hover:text-pink-800" routerLinkActive="myactive" routerLink="gh">
+                <li>error</li>
+            </a>
         </ul>
-        <button class="btn btn-secondary" (click)="showData()">Get Data</button>
     </nav>
 </div>

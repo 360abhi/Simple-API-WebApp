@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {  Router } from '@angular/router';
+import { ApiService } from '../Services/api.service';
 
 @Component({
   selector: 'app-errorpage',
@@ -8,7 +9,10 @@ import {  Router } from '@angular/router';
 })
 export class ErrorpageComponent {
 
-  constructor(public router:Router) {}
+  constructor(public router:Router,public _apiservice:ApiService) {
+    this._apiservice.navbar = false;
+  }
+
   returnToHome() : void {
     this.router.navigate(["/"])
   }
